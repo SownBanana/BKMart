@@ -5,6 +5,9 @@
  */
 package com.hust.model;
 
+import java.util.Arrays;
+
+
 /**
  *
  * @author SownBanana
@@ -18,7 +21,7 @@ public class Customer {
     private String username;                //tài khoản đăng nhập
     private String password;                //mật khẩu đăng nhập
     private String email;                   //email khách hàng
-    private String address;                 //địa chỉ
+    private Address address;                 //địa chỉ
     private int phoneNumber;                //số điện thoại
     private Order[] historyOrder;           //lịch sử mua hàng
     private double wallet;                  //ví của khách hàng
@@ -36,7 +39,7 @@ public class Customer {
     }
 
     public Customer(int id, String name, String gender, String picture, int idNumber, String username, String password, String email,
-            String address, int phoneNumber, Order[] historyOrder, double wallet, int bankAcount, String level, String[] voucher) {
+            Address address, int phoneNumber, Order[] historyOrder, double wallet, int bankAcount, String level, String[] voucher) {
         this.id = id;
         this.name = name;
         this.gender = gender;
@@ -97,7 +100,7 @@ public class Customer {
         this.email = email;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
@@ -157,7 +160,7 @@ public class Customer {
         return email;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
@@ -185,6 +188,28 @@ public class Customer {
         return voucher;
     }
 
-    
+    public void displayInfor (){
+        System.out.println("id : " + this.id);
+        System.out.println("name : " + this.name);
+        System.out.println("gender : " + this.gender);
+        System.out.println("picture : " + this.picture);
+        System.out.println("idNumber : " + this.idNumber);
+        System.out.println("username : "  + this.username);
+        System.out.println("password : " + this.password);
+        System.out.println("email : " + this.email);
+        System.out.println("address : " + this.address);
+        System.out.println("phone number : " + this.phoneNumber);
+        System.out.println("history orders : " + Arrays.toString(this.historyOrder));
+        System.out.println("wallet : " + this.wallet);
+        System.out.println("bank account : " + this.bankAcount);
+        System.out.println("level : " + this.level);
+        System.out.println("voucher : " + Arrays.toString(this.voucher));
+
+    }
+    public void displayInforSignIn (){
+        System.out.println("email : " + this.email);
+        System.out.println("username : "  + this.username);
+        System.out.println("password : " + this.password);
+    }
     
 }
