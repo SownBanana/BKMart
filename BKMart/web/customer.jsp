@@ -60,7 +60,7 @@
                             <span>Địa chỉ email : <%=customer.getEmail()%></span>
                         </div>
                         <div>
-                            <span style="color: red;">Độ vip : <%=customer.getLevel()%></span>  
+                            <span style="color: red;">Cấp độ người dùng : <%=customer.getLevel()%></span>  
                         </div>
                         <div>
                             <span>Địa chỉ  : <%=customer.getAddress()%></span>  

@@ -126,10 +126,10 @@
                                                 <td class="center">
 
                                                     <a class="btn btn-success" href="../UpLv?id=${customer.getCustomerId()}">
-                                                        UpLv
+                                                        Tăng Level
                                                     </a>
                                                     <a class="btn btn-info" href="../DownLv?id=${customer.getCustomerId()}">
-                                                        DownLv
+                                                        Giảm Level
                                                     </a>
 
                                                 </td>

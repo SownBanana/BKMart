@@ -68,16 +68,16 @@
 
                         <div class="cart-header">
                             <a href="Cart?product_id=${product.productId}&delete=delete"><div class="close" style="background: url('images/close_1.png') no-repeat 0px 0px;
-                                     cursor: pointer;
-                                     width: 28px;
-                                     height: 28px;
-                                     position: absolute;
-                                     right: 0px;
-                                     top: 0px;
-                                     -webkit-transition: color 0.2s ease-in-out;
-                                     -moz-transition: color 0.2s ease-in-out;
-                                     -o-transition: color 0.2s ease-in-out;
-                                     transition: color 0.2s ease-in-out;" > 
+                                                                                              cursor: pointer;
+                                                                                              width: 28px;
+                                                                                              height: 28px;
+                                                                                              position: absolute;
+                                                                                              right: 0px;
+                                                                                              top: 0px;
+                                                                                              -webkit-transition: color 0.2s ease-in-out;
+                                                                                              -moz-transition: color 0.2s ease-in-out;
+                                                                                              -o-transition: color 0.2s ease-in-out;
+                                                                                              transition: color 0.2s ease-in-out;" > 
                                 </div></a>
                             <div class="cart-sec simpleCart_shelfItem">
                                 <div class="cart-item cyc">
@@ -125,9 +125,13 @@
                         <div class="clearfix"> </div>
                     </ul>
 
-
                     <div class="clearfix"></div>
-                    <a class="order" href="purchase.jsp?id=${user.customerId}">Đặt mua </a>
+                    <c:if test="${user ne null}">
+                        <a class="order" href="purchase.jsp?id=${user.customerId}">Đặt mua </a>
+                    </c:if>
+                    <c:if test="${user eq null}">
+                        <a class="order" href="login.jsp">Đặt mua </a>
+                    </c:if>                   
                     <div class="total-item">
                         <h3>Lựa chọn thanh toán </h3>
                         <h4>Mã giảm giá </h4>
