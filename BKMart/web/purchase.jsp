@@ -52,7 +52,8 @@
                         <div>
                             <span>Địa chỉ email: <%=customer.getEmail()%></span>
                         </div>
-                        <form action="Cart" method="post">
+                        <!--<form action="Cart" method="post">-->
+                        <form action="makeOrder" method="post">
                             <div>
 
                                 <span>Tên  : </span>  

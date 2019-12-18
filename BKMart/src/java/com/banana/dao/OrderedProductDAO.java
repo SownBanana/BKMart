@@ -38,7 +38,24 @@ public class OrderedProductDAO {
             preparedStatement = connectDB.getMyConnection().prepareStatement(query);
             preparedStatement.setInt(1, orderedProductEntity.getOrderId());
             preparedStatement.setInt(2, orderedProductEntity.getProductId());
-            preparedStatement.setInt(3, orderedProductEntity.getQuantity());
+            preparedStatement.setInt(3, 1);
+            return preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+        public int insertOrderProduct(int orderId, int productId){
+        String query = "INSERT INTO emarkett.ordered_product (order_id, product_id, quantity) VALUES " +
+                "(?,?,?);";
+        PreparedStatement preparedStatement;
+        try{
+            preparedStatement = connectDB.getMyConnection().prepareStatement(query);
+            preparedStatement.setInt(1, orderId);
+            preparedStatement.setInt(2, productId);
+            preparedStatement.setInt(3, 1);
             return preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

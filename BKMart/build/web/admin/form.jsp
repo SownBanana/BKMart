@@ -7,7 +7,7 @@
         <!-- start: Meta -->
         <meta charset="utf-8">
         <title>Nhập sản phẩm</title>
-        <link rel="SHORTCUT ICON" href="images/logo.png">
+        <link rel="SHORTCUT ICON" href="../images/logo.png">
         <meta name="description" content="Bootstrap Metro Dashboard">
         <meta name="author" content="Dennis Ji">
         <meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -25,32 +25,15 @@
         <link href="../font1/fontawesome-webfont-0.eot"/>;
         <link href="../font1/fontawesome-webfont-62877.eot"/>;
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-        <!-- end: CSS -->
-        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <link id="ie-style" href="../css1/ie.css" rel="stylesheet">
-        <![endif]-->
 
-        <!--[if IE 9]>
-        <link id="ie9style" href="../css1/ie9.css" rel="stylesheet">
-        <![endif]-->
-        <![endif]-->
-
-        <!-- start: Favicon -->
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <!-- end: Favicon -->
-
-
 
 
     </head>
 
     <body>
-        <%
-            request.setCharacterEncoding("UTF-8");
-            response.setCharacterEncoding("UTF-8");
-        %>
+        <%request.setCharacterEncoding("UTF-8");%>
+        <%response.setCharacterEncoding("UTF-8");%>
 
         <div class="navbar">
             <div class="navbar-inner">
@@ -207,7 +190,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="control-group">
                                             <p>Ảnh chính </p>
                                             <div class="controls">
@@ -236,7 +219,7 @@
                                         </div>
                                         <%
 //                                            String url = (String) request.getAttribute("file3");
-                                        %>
+%>
                                         <div class="form-actions">
                                             <button type="submit" class="btn btn-primary">Lưu sản phẩm</button>
                                             <button class="btn" ><a href="form.jsp">Hủy</a></button>

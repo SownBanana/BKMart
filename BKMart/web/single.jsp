@@ -196,7 +196,7 @@
                                 </a>
                             </div>
                             <h4><a href="viewSingleProduct?productId=${productRl.productId}">${productRl.name}</a></h4>
-                            <p><fmt:formatNumber type = "number" maxFractionDigits = "3" value = "${product.price}" /> VNĐ</p>
+                            <p><fmt:formatNumber type = "number" maxFractionDigits = "3" value = "${productRl.price}" /> VNĐ</p>
                         </div>
                     </c:forEach>
                     <div class="clearfix"> </div>
@@ -212,7 +212,7 @@
                                 </a>
                             </div>
                             <h4><a href="viewSingleProduct?productId=${productRl.productId}">${productRl.name}</a></h4>
-                            <p><fmt:formatNumber type = "number" maxFractionDigits = "3" value = "${product.price}" /> VNĐ</p>
+                            <p><fmt:formatNumber type = "number" maxFractionDigits = "3" value = "${productRl.price}" /> VNĐ</p>
                         </div>
                     </c:forEach>
                     <div class="clearfix"> </div>

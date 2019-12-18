@@ -133,9 +133,9 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a class="color4" href="about.html">Thông tin </a></li>
-                            <li><a class="color5" href="404.html">Bài viết </a></li>
-                            <li><a class="color6" href="contact.html">Liên hệ - Hỗ Trợ</a></li>
+                            <li><a class="color4" href="#acc">Phụ kiện </a></li>
+<!--                            <li><a class="color5" href="404.html">Bài viết </a></li>-->
+                            <li><a class="color6" href="https://fb.me/SownChuoois">Liên hệ - Hỗ Trợ</a></li>
                         </ul>
                     </div>
                 </div>

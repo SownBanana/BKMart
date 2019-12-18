@@ -9,7 +9,7 @@
         <!-- start: Meta -->
         <meta charset="utf-8">
         <title>Quản lý 15Tech Shop</title>
-        <link rel="SHORTCUT ICON" href="images/logo.png">
+        <link rel="SHORTCUT ICON" href="../images/logo.png">
         <meta name="description" content="Bootstrap Metro Dashboard">
         <meta name="author" content="Dennis Ji">
         <meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -38,7 +38,7 @@
     <body>
         <%
             OrderedProductDAO orderedProductDAO = new OrderedProductDAO();
-            String tongTien = String.format("%.3f", orderedProductDAO.getTotalEarning());
+            String tongTien = String.format("%.0f", orderedProductDAO.getTotalEarning());
             TongNhieuThu tong = new TongNhieuThu();
             int tongSp = tong.tongSanPham();
             int tongDon = tong.tongDonDaBan();
@@ -120,7 +120,7 @@
                         </div>
                         <div class="span3 statbox green" onTablet="span6" onDesktop="span3">
                             <div class="number"><%=tongDon%><i class="icon-arrow-up"></i></div>
-                            <div class="title">Số sản phẩm bán ra</div>
+                            <div class="title">Số đơn hàng đã</div>
 
                         </div>
                         <div class="span3 statbox blue noMargin" onTablet="span6" onDesktop="span3">
@@ -130,7 +130,7 @@
                         </div>
                         <div class="span3 statbox yellow" onTablet="span6" onDesktop="span3">
 
-                            <div class="number"><%=tongTien%> VND<i class="icon-arrow-down"></i></div>
+                            <div class="number" style="font-size: 25px;"><%=tongTien%> VNĐ<i class="icon-arrow-down"></i></div>
                             <div class="title">Tổng tiền bán được</div>
 
                         </div>	

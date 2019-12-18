@@ -11,7 +11,7 @@
 
         <meta charset="utf-8">
         <title>Quản lý người dùng</title>
-        <link rel="SHORTCUT ICON" href="images/logo.png">
+        <link rel="SHORTCUT ICON" href="../images/logo.png">
         <meta name="description" content="Bootstrap Metro Dashboard">
         <meta name="author" content="Dennis Ji">
         <meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -44,7 +44,6 @@
             request.setAttribute("listCustomer", listCustomer);
         %>
 
-        <-- start: Header -->
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container-fluid">

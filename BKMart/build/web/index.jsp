@@ -49,7 +49,11 @@
             <div class="container">
                 <div class="banner_desc">
                     <h1>FIFTEEN TECHNOLOGY</h1>
-                    <h2>Mua cả thế giới mà bạn muốn </h2>
+                    <h2 style="    color: #fff;
+                        text-transform: uppercase;
+                        font-size: 1em;
+                        font-weight: 650;
+                        letter-spacing: 5px;">Mua cả thế giới mà bạn muốn </h2>
                     <div class="button">
                         <a href="#" class="hvr-shutter-out-horizontal">Mua Ngay</a>
                     </div>
@@ -279,9 +283,9 @@
                 <h2 class="m_3">Sự Kiện Đang Diễn Ra</h2>
                 <div class="grid_1">
                     <div class="col-md-6 blog_1">
-                        <a href="index_single.html">
+                        <a href="#">
                             <div class="item-inner">
-                                <img src="images/sale1.jpg" class="img-responsive" alt="" />
+                                <img src="https://cafebiz.cafebizcdn.vn/thumb_w/640/2019/8/11/178a0914-15655299028751454688145-15655299614321067793079-crop-15655300047211502251751.png" class="img-responsive" alt="" />
                                 <div class="date-comments">
                                     <div class="time"><span class="date"><span class="word1">28</span> <span class="word2">Tháng 12</span> </span>
                                     </div>
@@ -294,9 +298,9 @@
                         </a>
                     </div>
                     <div class="col-md-6 row_2">
-                        <a href="index_single.html">
+                        <a href="#">
                             <div class="item-inner">
-                                <img src="images/sale2.jpg" class="img-responsive" alt="" />
+                                <img src="https://cafebiz.cafebizcdn.vn/thumb_w/640/2019/2019-thumb9c84d5f0-3a1f-448f-8795-3a88ff5a8e2e-15764882314461898812061-0-0-375-600-crop-1576488237731-637121793439357500.jpg" class="img-responsive" alt="" />
                                 <div class="date-comments">
                                     <div class="time"><span class="date"><span class="word1">14</span> <span class="word2">Tháng 2</span> </span>
                                     </div>

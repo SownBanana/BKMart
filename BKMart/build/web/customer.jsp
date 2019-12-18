@@ -5,6 +5,7 @@
   Time: 7:08 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@page import="com.banana.dao.CustomerOrderDAO"%>
 <%@page import="com.banana.dao.CustomerDAO"%>
 <%@page import="com.banana.entity.CustomerLvEntity"%>
 <%@page import="com.banana.dao.CustomerLvDAO"%>
@@ -31,8 +32,8 @@
         <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
         <script type="text/javascript" src="js/megamenu.js"></script>
         <script>$(document).ready(function () {
-    $(".megamenu").megamenu();
-});</script>
+                $(".megamenu").megamenu();
+            });</script>
     </head>
     <body>
         <%@include file="header.jsp"%>
@@ -43,32 +44,34 @@
             int id = Integer.parseInt(request.getParameter("id"));
             CustomerEntity customer = customerDAO.getIdCustomer(id);
             String mess = request.getParameter("mess1");
-            String stt="";
-            if(mess!= null){
+            String stt = "";
+            if (mess != null) {
                 stt = "______________Đổi thông tin thành công____________";
             }
+            CustomerOrderDAO customerOrderDAO = new CustomerOrderDAO();
+            request.getSession().setAttribute("allOrder", customerOrderDAO.getAllOrder(id));
         %>
         <div class="single_top">
             <div class="container">
                 <div class="register">
                     <div class="col-md-6 login-right">
                         <span><p style="color:red;"><%=stt%></p></span>
-                        <h3>Xin chào <%=customer.getName()%></h3>
-                        <p>Thông tin khách hàng</p>
+                        <h3 style="font-size: 1.3em;">Xin chào <%=customer.getName()%></h3>
+                        <p style="color: black; font-size: 25px;">Thông tin khách hàng</p>
 
-                        <div>
+                        <div style="font-size: 22px;">
                             <span>Địa chỉ email : <%=customer.getEmail()%></span>
                         </div>
-                        <div>
+                        <div style="font-size: 22px;">
                             <span style="color: red;">Cấp độ người dùng : <%=customer.getLevel()%></span>  
                         </div>
-                        <div>
+                        <div style="font-size: 22px;">
                             <span>Địa chỉ  : <%=customer.getAddress()%></span>  
                         </div>
-                        <div>
+                        <div style="font-size: 22px;">
                             <span>Tỉnh thành : <%=customer.getCityRegion()%></span>  
                         </div>
-                        <div>
+                        <div style="font-size: 22px;">
                             <span>Số điện thoại : 0<%=customer.getPhone()%></span>  
                         </div>
                         <a class="forgot" href="formUser.jsp?id=<%=id%>"><br>Thay đổi thông tin ? </a>
@@ -76,9 +79,25 @@
 
                     </div>
                     <div class="col-md-6 login-left">
-                        <h3>Khách hàng mới </h3>
-                        <p>Bằng cách tạo tài khoản với cửa hàng của chúng tôi, bạn sẽ có thể thực hiện thanh toán nhanh hơn, lưu trữ nhiều địa chỉ giao hàng, xem và theo dõi đơn hàng của bạn trong tài khoản của bạn và hơn thế nữa.</p>
-                        <a class="acount-btn" href="register.jsp">Đăng kí tài khoản </a>
+                        <h3  style="font-size: 1.3em;">Lịch sử đơn hàng</h3>
+                        <c:forEach items="${allOrder}" var ="order">
+                            <div style="display: flex">
+                                <a href="viewSingleProduct?productId=${order.productId}">
+                                    <img style="margin-right: 10px" width="60px" height="60px" src="${order.image}" >
+                                </a>
+                                <div>
+                                    <span style="color: #999; font-size: 16px;"><span ><a href="viewSingleProduct?productId=${order.productId}"> ${order.name}</a></span></span>
+                                    <div style="display: flex; margin: 11px; height: 50px">  
+                                        <span style="color: #999;  font-size: 13px;"><span >Mã đơn hàng : ${order.order_id}</span></span>
+                                        <span style="color: #999;  font-size: 13px; margin-left: 112px;"><span >Ngày mua : ${order.created}</span></span>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+
+                        </c:forEach>
                     </div>
                     <div class="clearfix"> </div>
                 </div>

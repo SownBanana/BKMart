@@ -56,7 +56,6 @@ public class Cart extends HttpServlet {
                 }
                 request.getSession().setAttribute("tong", tong);
                 request.getSession().setAttribute("listProduct", productEntitys);
-                System.out.println("Lissss" + productEntitys.size());
                 if (request.getParameter("url") != null) {
                     String urlr = request.getParameter("url");
                     response.sendRedirect(urlr);
@@ -73,7 +72,6 @@ public class Cart extends HttpServlet {
                 }
                 request.getSession().setAttribute("tong", tong);
                 request.getSession().setAttribute("listProduct", productEntitys);
-                System.out.println("Lissss" + productEntitys.size());
                 response.sendRedirect("cart.jsp");
             }
         }
